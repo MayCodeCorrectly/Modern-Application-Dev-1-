@@ -1,0 +1,305 @@
+<!--Topic : Nested List and Tables -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nested List and Tables</title>
+</head>
+<body>
+
+<!--Nested List-->
+<h1>Country List</h1>
+<ul>
+    <li>India
+        <ul>
+            <li>Delhi
+            <ol>
+                <li>Dwarka</li>
+                <li>South Delhi</li>
+            </ol>
+            </li>
+            <li>Mumbai</li>
+            <li>Goa</li>
+        </ul>
+    </li>
+    <li>USA
+        <ul>
+            <li>California</li>
+            <li>Texas
+                <ol>
+                    <li>Houston</li>
+                    <li>Austin</li>
+                    <li>Dallas</li>
+                </ol>
+            </li>
+        </ul>
+    </li>
+    <li>England
+        <ul>
+            <li>London</li>
+            <li>Oval</li>
+        </ul>
+    </li>
+</ul>
+
+<br /> <hr />
+
+<h2>Table Tag </h2>
+<table border="5">
+    <caption>Simple Table</caption>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>Sandeep</td>
+        <td>20</td>
+    </tr>
+    <tr>
+        <td>Alen</td>
+        <td>25</td>
+    </tr>
+    <tr>
+        <td align="center">Shen</td>
+    </tr>
+    <tr>
+        <td>Nile</td>
+        <td>56</td>
+    </tr>
+</table>
+
+<br />
+<table border = "2">
+    <caption>Job Titles</caption>
+    <tr>
+        <th>Name</th>
+        <th>Job</th>
+    </tr>
+    <tr>
+        <td>Rohit</td>
+        <td>Frontend Developer</td>
+    </tr>
+    <tr>
+        <td>Smith</td>
+        <td align="center">Backend Dev.</td>
+    </tr>
+    <tr>
+        <td>Shila</td>
+        <td align="center">Fullstack Dev.</td>
+    </tr>
+</table>
+
+<br/>
+<h2>Sections In Table</h2>
+<p>We Divide table into three different sections <br>
+    <b>Head section : <i>thead tag</i></b><br>
+    <b>Body section : <i>tbody tag</i></b><br>
+    <b>Footer section : <i>tfoot tag</i></b>
+</p>
+
+<table border="1">
+    <caption><i>Sales Data</i></caption>
+    <thead>
+    <tr>
+        <th>Month</th>
+        <th>Revenue</th>
+        <th>Profit</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td>Jan</td>
+        <td>10000</td>
+        <td>3000</td>
+    </tr>
+    <tr>
+        <td>Feb</td>
+        <td>15000</td>
+        <td>5000</td>
+    </tr>
+    </tbody>
+
+    <tfoot>
+    <tr>
+        <td>Total</td>
+        <td colspan="2">25000</td>
+    </tr>
+    </tfoot>
+</table>
+
+<hr>
+<h2>Row Span and Col Span</h2>
+
+<table border="2">
+    <caption>colspan</caption>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th colspan="2">Contact Info.</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td>John Doe</td>
+        <td>9918103210</td>
+        <td>john@example.com</td>
+    </tr>
+    <tr>
+        <td>Copper</td>
+        <td>996024125</td>
+        <td>cooper@example.com</td>
+    </tr>
+    <tr>
+        <td>Mohan</td>
+        <td>8960124152</td>
+        <td>mohan@example.com</td>
+    </tr>
+    </tbody>
+</table>
+
+<br />
+<table border="2">
+    <caption>rowspan</caption>
+    <thead>
+    <tr>
+        <th>Column 1</th>
+        <th>Column 2</th>
+        <th>Column 3</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td rowspan="2">Row 1 Cell 1</td>
+        <td>Row 1 cell 2</td>
+        <td>Row 1 cell 3</td>
+    </tr>
+    <tr>
+        <td>Row 2 cell 2</td>
+        <td>Row 2 cell 3</td>
+    </tr>
+    </tbody>
+
+    <tfoot>
+    <tr>
+        <td colspan="3" align="center">Row 3 cell 1</td>
+    </tr>
+    </tfoot>
+</table>
+
+<hr />
+<h2>Challenge 1</h2>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Level 1</th>
+        <th>Level 2</th>
+        <th>Level 3</th>
+        <th>Level 4</th>
+        <th>Level 5</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td rowspan="6">System</td>
+        <td rowspan="4">System Apps</td>
+        <td rowspan="3" align="center">System Env</td>
+        <td>App Test</td>
+        <td rowspan="2">Testing</td>
+    </tr>
+
+    <tr>
+        <td>App Memory</td>
+    </tr>
+    <tr>
+        <td>App Test v2</td>
+        <td rowspan="2">Bar</td>
+    </tr>
+
+    <tr>
+        <td>System Env v2</td>
+        <td>App Memory v2</td>
+    </tr>
+
+    <tr>
+        <td colspan="2" rowspan="2" align="center">System Memory</td>
+        <td rowspan="1">Memory Function</td>
+        <td rowspan="2">Deployment</td>
+<!--        <td>Foo</td>-->
+    </tr>
+
+    <tr>
+        <td>Bar v2</td>
+<!--        <td>Bing</td>-->
+    </tr>
+    </tbody>
+</table>
+
+<br>
+<h2>Challenge 2</h2>
+<table border="1">
+    <thead>
+    <tr>
+        <th colspan="7">Time Table</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <th rowspan="6">Hours</th>
+        <th>Mon</th>
+        <th>Tues</th>
+        <th>Wed</th>
+        <th>Thr's</th>
+        <th>Fri</th>
+        <th>Sat</th>
+    </tr>
+
+    <tr>
+        <td>Science</td>
+        <td>Math</td>
+        <td>Art's</td>
+        <td>Science</td>
+        <td>Math</td>
+        <td>Art's</td>
+    </tr>
+
+    <tr>
+        <td>Math</td>
+        <td>Art's</td>
+        <td>Science</td>
+        <td>Math</td>
+        <td>Art's</td>
+        <td>Science</td>
+    </tr>
+
+    <tr>
+        <td colspan="6" align="center"><b>Lunch</b></td>
+    </tr>
+
+    <tr>
+        <td>Art's</td>
+        <td>Science</td>
+        <td>Math</td>
+        <td>Art's</td>
+        <td>Science</td>
+        <td>Math</td>
+    </tr>
+
+    <tr>
+        <td>Science</td>
+        <td>Math</td>
+        <td>Art's</td>
+        <td>Science</td>
+        <td>Art's</td>
+        <td>Math</td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
