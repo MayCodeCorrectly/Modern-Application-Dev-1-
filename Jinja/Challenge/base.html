@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    {% for product in Products | groupby("producer") %}
+        <table style="text-align: center;">
+            <thead>
+                <tr>
+                    <th colspan="3">{{product.grouper}}</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <!-- <tr>{% for key in product.list[0].keys() %}
+                    {% if key != "producer" -%}
+                        <td>{{key}}</td>
+                    {%- endif %}
+                {%- endfor %}
+                </tr> -->
+                <tr>
+                    <td>Id</td>
+                    <td>Name</td>
+                    <td>Type</td>
+                </tr>
+                {% for item in product.list -%}
+                <!-- <tr>
+                    {% for value in item.values()  -%}
+                    <td>{{value}}</td>
+                    {% endfor %}
+                </tr> -->
+                <!-- or we can use -->
+                
+                <tr>
+                    <td>{{item.product_id}}</td>
+                    <td>{{item.prod_name}}</td>
+                    <td>{{item.type}}</td>
+                    <!-- <td>{{item.producer}}</td> -->
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <br>
+        <h2>The number of products in {{product.grouper}} are {{product.list|length}}</h2>
+        <br>
+    {% endfor %}
+</body>
+</html>
