@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>register</title>
+    <title>Register Here</title>
 </head>
 <body>
-    
+    <form method="POST" action="/index">
+        <label>First Name : 
+            <input type="text" name="user_fname" required></label><br>
+        <label>Surname : 
+            <input type="text" name="user_lname" required></label>
+        <p>Gender: <br>
+            <label><input type="radio" value="male" name="gender" required>Male</label><br>
+            <label><input type="radio" value="female" name="gender">Female</label><br>
+            <label><input type="radio" value="other" name="gender">Other</label>
+        </p>
+        <label>Enter your current address: <br>
+            <textarea rows="8" cols="16" 
+            placeholder="apt. number, colony name, street name, city, zipcode" 
+            name="c_address" required></textarea></label><br>
+        <label>Phone number (currently active on Whatsapp) : 
+            <input type="tel" name="phone" pattern="[0-9]{10}" required></label><br><br>
+        <label><input type="submit" value="Submit"></label>
+    </form>
 </body>
 </html>
