@@ -4,13 +4,15 @@ from flask import render_template
 from flask import request
 from flask import url_for # to get the url 
 from flask import redirect
+# from flask_sqlalchemy import SQLAlchemy # for SQLite3
 
 # make instance/object of Flask class
 app = Flask(__name__,template_folder="views") # Since default folder is "templates" direct it to "views"
 print(type(app))
 
 @app.route("/") # root or base url --> http://127.0.0.1:5000  or http://localhost:5000
-# This binds the url with definition written below it
+# This binds the url with definition written below it,
+# It is a decorator function/method which binds teh function with url
 def root():
     return "<h1>Hello World!!<h1>"
 
