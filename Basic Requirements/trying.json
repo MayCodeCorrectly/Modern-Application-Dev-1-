@@ -1,0 +1,19 @@
+{
+    "Key":"Value",
+    "id":1,
+    "name":"Alice",
+    "age":21,
+    "gender":"M",
+    "over18":true
+}
+
+{
+"Age": 27,
+"firstName": "John",
+"lastName": "Smith",
+"married": true,
+"phone_numbers": [
+"212-555-1234",
+"212-666-5678"
+]
+}

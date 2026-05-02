@@ -2,6 +2,9 @@ from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 import os
 
+# there is ODBC lib for python 
+# import pyodbc  as  pd # py Open Database Connectivity
+
 current_dir = os.path.abspath(os.path.dirname(__file__))
 
 app = Flask(__name__) # make object
@@ -19,7 +22,7 @@ class User(db.Model):
     user_age = db.Column(db.Integer, nullable = False)
 
 # getting an idea    
-print(User.query.all()) # confirmation
+print(User.query.order_by(User.user_id).all()) # confirmation
 
 tuples = User.query.all()
 print(type(tuples[0]))
@@ -29,9 +32,8 @@ for object in tuples:
     #  ======== CRUD operation =========== #
 
 # add / create
-db.create_all()
-new_user = User(user_name= "Mainsh", user_gender ="M", user_age = 20)
-db.session.add(new_user)
+# new_user = User(user_name= "Mainsh", user_gender ="M", user_age = 20)
+# db.session.add(new_user)
 # db.session.commit() # Since manish is already (in first execution) added so need to commit it again
 
 #The many times you execute this that many times "mainsh" will get added 
