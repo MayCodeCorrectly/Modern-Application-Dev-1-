@@ -5,3 +5,6 @@ def test_is_prime():
     assert is_prime(2) == True
 
 # to run open terminal and do "pytest test_main.py"
+
+def my_test():
+    assert any([0]) == True
